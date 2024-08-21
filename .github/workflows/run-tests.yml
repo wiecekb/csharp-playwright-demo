@@ -32,6 +32,7 @@ jobs:
         run: dotnet test src --no-build --verbosity normal
 
       - name: Upload Allure Results
+        if: always()
         uses: actions/upload-artifact@v4.0.0
         with:
           name: allure-results
@@ -40,12 +41,13 @@ jobs:
           retention-days: 20
 
   report:
+    if: always()
     needs: test
     runs-on: ubuntu-latest
 
     steps:
       - name: Download Build Artifact
-        uses: actions/download-artifact@v4.1.0
+        uses: actions/download-artifact@v4.1.0\
         with:
           name: allure-results
           path: ./allure-results
@@ -59,7 +61,7 @@ jobs:
           path: gh-pages
 
       - name: Generate report
-        uses: simple-elf/allure-report-action@v1.7
+        uses: simple-elf/allure-report-action@v1.9
         if: always()
         id: allure-report
         with:
