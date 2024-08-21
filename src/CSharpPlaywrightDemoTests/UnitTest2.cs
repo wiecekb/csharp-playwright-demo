@@ -15,4 +15,10 @@ public class UnitTests2 : PageTest
 
         await Expect(Page).ToHaveTitleAsync(new Regex("Playwright1"));
     }
+
+    [Test]
+    public async Task Test22()
+    {
+        await Task.CompletedTask;
+    }
 }
