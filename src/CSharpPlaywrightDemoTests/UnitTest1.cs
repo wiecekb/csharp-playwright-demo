@@ -1,7 +1,9 @@
+using Allure.NUnit;
+
 namespace CSharpPlaywrightDemoTests;
 
+[AllureNUnit]
 [Parallelizable(ParallelScope.Self)]
-[TestFixture]
 public class Tests : PageTest
 {
     [Test]
