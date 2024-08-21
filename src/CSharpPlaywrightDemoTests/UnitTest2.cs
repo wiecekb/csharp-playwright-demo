@@ -13,7 +13,7 @@ public class UnitTests2 : PageTest
     {
         await Page.GotoAsync("https://playwright.dev");
 
-        await Expect(Page).ToHaveTitleAsync(new Regex("Playwright1"));
+        await Expect(Page).ToHaveTitleAsync(new Regex("Playwright"));
     }
 
     [Test]
