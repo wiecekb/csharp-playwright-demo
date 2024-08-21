@@ -1,8 +1,10 @@
 using Allure.NUnit;
+using Allure.NUnit.Attributes;
 
 namespace CSharpPlaywrightDemoTests;
 
 [AllureNUnit]
+[AllureSuite("PlaywrightTests")]
 [Parallelizable(ParallelScope.Self)]
 public class Tests : PageTest
 {
