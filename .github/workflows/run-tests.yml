@@ -20,7 +20,7 @@ jobs:
       - name: 🏗 Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: 9.0.x
 
       - name: 🏗 Restore dependencies
         run: dotnet restore src
@@ -30,7 +30,7 @@ jobs:
 
       - name: 🦾 Install browser for Playwright tests
         shell: pwsh
-        run: src/CSharpPlaywrightDemoTests/bin/Debug/net8.0/playwright.ps1 install --with-deps chromium
+        run: src/CSharpPlaywrightDemoTests/bin/Debug/net9.0/playwright.ps1 install --with-deps chromium
 
       - name: Test
         run: dotnet test src --no-build --verbosity normal
@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
-          path: src/CSharpPlaywrightDemoTests/bin/Debug/net8.0/allure-results
+          path: src/CSharpPlaywrightDemoTests/bin/Debug/net9.0/allure-results
           if-no-files-found: error
           retention-days: 20
 
