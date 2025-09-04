@@ -1,4 +1,5 @@
 using Allure.Net.Commons;
+using Allure.NUnit.Attributes;
 using Microsoft.Playwright;
 
 namespace CSharpPlaywrightDemoTests;
@@ -11,6 +12,7 @@ public class MainPage:PageTest
         _page = page;
     }
 
+    [AllureStep("Test {url}")]
     public async Task OpenWebPage(string url)
     {
         await _page.GotoAsync(url);
