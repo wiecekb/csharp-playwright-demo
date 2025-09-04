@@ -1,0 +1,1 @@
+{"table":"A","currency":"funt szterling","code":"GBP","rates":[{"no":"225/A/NBP/2019","effectiveDate":"2019-11-21","mid":5.0144}]}
