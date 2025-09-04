@@ -1,5 +1,7 @@
 using System.Text;
 using Allure.Net.Commons;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using RestSharp;
 
 namespace CSharpPlaywrightDemoTests;
@@ -20,7 +22,7 @@ public class SimpleRestSharpTestImpl
     {
         _request = new RestRequest(endpointUrl);
         _response = _restclient.Execute(_request);
-        AllureApi.AddAttachment("mainWebPage.png", "application/json",  Encoding.UTF8.GetBytes(_response.Content),"json");
+        AllureApi.AddAttachment("Response", "application/json",  Encoding.UTF8.GetBytes(JToken.Parse(_response.Content).ToString(Formatting.Indented)));
         System.Console.WriteLine();
     }
 }
