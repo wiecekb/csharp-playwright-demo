@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"74f0fb346b9e95e90e4b0c1749da424c","name":"Playwright","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}},{"uid":"b162e1597dd6f7c494032bda09b167dd","name":"RestSharp","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
