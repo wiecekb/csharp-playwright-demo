@@ -1,0 +1,1 @@
+[{"uid":"6cd055a755b6b15c","name":"RestSharpTest","time":{"start":1757228532040,"stop":1757228532588,"duration":548},"status":"passed","severity":"normal"},{"uid":"1451c937310347c5","name":"PlaywrightTest","time":{"start":1757228532036,"stop":1757228533309,"duration":1273},"status":"passed","severity":"normal"}]
